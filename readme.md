@@ -1,0 +1,1 @@
+Html which adds Javascript responses for rock paper scissors
