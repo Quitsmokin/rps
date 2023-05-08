@@ -8,62 +8,19 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="wrapper">
     <input type="text" class="select" placeholder="Rock,Paper, or Scissors?">
-    <button class="submit" onclick="onClickHandler()">Submit</button>
-    <p></p>
-    
-    <script>
-
-    var inp = document.querySelector('.select').value;
-    var para = document.querySelector('p'); 
-    inp = inp.toLowerCase(); 
    
-    function onClickHandler(){
-    var inp = document.querySelector('.select').value;
-       var comp =  getComputerChoice();
-       console.log("computer:"+ comp);
-       console.log("player:"+ inp);
-       switch(inp) {
+    
+
+    <button class="rock">rock </button>
+    <button class="paper">paper</button>
+    <button class="scissor">scissor</button>
+    <p></p>
+</div>
+    <script>
+        window.addEventListener("click", event => playRound(event)); 
         
-            
-        case "scissors":
-            
-                if(comp === "rock"){
-                    para.textContent = `computer wins` ; 
-                    break;
-                 } else if(comp ==="paper") {
-                    para.textContent = `you win `; 
-                    break;
-                } else {
-                    para.textContent = `Redo~! `; 
-                    break;
-                }
-        case "paper": 
-                if(comp === "scissors"){
-                    para.textContent = `computer wins` ; 
-                    break;
-                 } else if(comp ==="rock") {
-                    para.textContent = `you win`; 
-                    break;
-                } else if(comp==="paper"){
-                    para.textContent = `Redo~!`; 
-                    break;
-                }
-        case "rock": 
-                if(comp === "paper"){
-                    para.textContent = `computer wins` ; 
-                    break;
-                 } else if(comp ==="scissors") {
-                    para.textContent = `you win`; 
-                    break;
-                } else if(comp==="rock"){
-                    para.textContent = `Redo~!`; 
-                    break;
-                }
-        default: 
-                    para.textContent = `incorrect input`; 
-        }    
-    }
     </script>
 </body>
 </html>
